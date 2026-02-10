@@ -1,11 +1,13 @@
 const input = document.getElementById("imageInput");
-const button = document.querySelector("button");
+const result = document.getElementById("result");
 
-button.addEventListener("click", () => {
-    if (input.files.length === 0) {
-        alert("اختاري صورة أولاً");
-        return;
-    }
+input.addEventListener("change", () => {
+  const file = input.files[0];
+  if (!file) return;
 
-    alert("تم رفع الصورة بنجاح (التحليل قادم)");
+  const img = document.createElement("img");
+  img.src = URL.createObjectURL(file);
+
+  result.innerHTML = "";
+  result.appendChild(img);
 });
