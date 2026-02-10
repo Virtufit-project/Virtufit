@@ -1,1 +1,54 @@
-<link rel="stylesheet" href="style.css">
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  direction: rtl;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+header {
+  background: #000;
+  color: #fff;
+  padding: 20px;
+}
+
+.hero {
+  background: url("https://i.ibb.co/Fkp1hjF9/IMG-7366.jpg") center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+section {
+  padding: 40px 20px;
+}
+
+.collection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+}
+
+.collection img {
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.4s;
+}
+
+.collection img:hover {
+  transform: rotateY(15deg) scale(1.05);
+}
+
+.try img {
+  max-width: 300px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
